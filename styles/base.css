@@ -89,8 +89,10 @@ main {
 
 /* Profile Image Specific Style */
 .profile-image {
-    width: 50%; /* Reduce the width to half */
-    height: auto; /* Maintain aspect ratio */
+    width: 50%;
+    /* Reduce the width to half */
+    height: auto;
+    /* Maintain aspect ratio */
 }
 
 /* Footer Styles */
