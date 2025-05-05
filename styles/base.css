@@ -1,4 +1,4 @@
-/* Preconnect to Google Fonts for better performance */
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
 
 /* General Reset */
@@ -8,11 +8,13 @@
     box-sizing: border-box;
 }
 
+/* Body Styles */
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    margin: 0;
 }
 
 /* Header Styles */
@@ -25,10 +27,11 @@ header {
 
 header h1 {
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
 }
 
+/* Navigation Styles */
 nav {
     display: flex;
     justify-content: center;
@@ -51,7 +54,7 @@ nav a:hover {
     border-radius: 5px;
 }
 
-/* Main Styles */
+/* Main Content Styles */
 main {
     max-width: 1200px;
     margin: 2rem auto;
@@ -91,6 +94,9 @@ main {
 .profile-image {
     width: 50%;
     height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Footer Styles */
