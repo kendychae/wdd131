@@ -37,6 +37,12 @@ nav {
     padding: 0.5rem 0;
 }
 
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
 nav a {
     color: #fff;
     text-decoration: none;
@@ -59,6 +65,9 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .card {
@@ -115,7 +124,7 @@ footer span {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    nav {
+    nav ul {
         flex-direction: column;
         align-items: center;
     }
