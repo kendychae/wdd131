@@ -23,27 +23,45 @@ header h1 {
     font-size: 1.8rem;
 }
 
-nav ul {
+nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+nav ul {
+    display: none;
+    flex-direction: column;
     list-style: none;
     padding: 0;
     margin: 0;
+    background-color: #4CAF50;
 }
 
 nav ul li {
-    margin: 0 1rem;
+    margin: 0.5rem 0;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    transition: color 0.3s ease;
+    padding: 0.5rem;
+    display: block;
+    transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #FFD700;
+    background-color: #FFD700;
+}
+
+#hamburgerButton {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 main {
@@ -55,10 +73,16 @@ main {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-main h1 {
+main h1,
+main h2 {
     text-align: center;
-    font-size: 1.5rem;
     margin-bottom: 1rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
 }
 
 main figure {
@@ -87,30 +111,18 @@ footer {
     font-size: 0.9rem;
 }
 
-footer a {
-    color: #FFD700;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Grid Layout for Figures */
-main {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-}
-
 /* Responsive Design for Larger Screens */
 @media (min-width: 768px) {
     nav ul {
-        justify-content: space-around;
+        display: flex;
+        flex-direction: row;
     }
 
-    main {
-        max-width: 1200px;
+    #hamburgerButton {
+        display: none;
+    }
+
+    .container {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
