@@ -1,0 +1,38 @@
+@media (min-width: 768px) {
+
+    /* Header: Ensure horizontal layout on larger screens */
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* Navigation: Switch to a horizontal Flex layout */
+    nav {
+        flex-direction: row;
+    }
+
+    /* Always display the navigation elements on large screens */
+    #mainNav {
+        display: block;
+    }
+
+    /* Change nav list from vertical to horizontal */
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav ul li {
+        margin: 0 1rem;
+    }
+
+    /* Hide the hamburger button when not needed */
+    #hamburgerButton {
+        display: none;
+    }
+
+    /* Main Content Grid Layout: Use CSS Grid auto-fit technique */
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+}
