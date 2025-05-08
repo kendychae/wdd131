@@ -8,37 +8,57 @@
         content="Explore Guatemala, the Land of Trees. Learn about its geography, demographics, culture, and weather.">
     <meta name="author" content="Kendahl Bingham">
     <title>Guatemala | Land of Trees</title>
+
+    <!-- ✅ Preferred method for loading Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- ✅ CSS file -->
     <link rel="stylesheet" href="styles/place.css">
-    <script src="scripts/place.js" defer></script>
 </head>
 
 <body>
     <header>
         <h1>Guatemala: Land of Trees</h1>
     </header>
+
     <main>
-        <picture>
-            <source srcset="images/hero-large.webp" type="image/webp">
-            <img src="images/hero-large.webp" alt="Guatemala Landscape" width="800" height="400">
-        </picture>
         <section>
-            <h2>Quick Facts</h2>
+            <picture>
+                <source srcset="images/hero-large.webp" type="image/webp">
+                <img src="images/hero-large.webp" alt="Scenic view of Guatemala">
+            </picture>
+            <h2>Geography</h2>
+            <p>Guatemala features lush rainforests, volcanoes, and mountains. It is bordered by Mexico, Belize,
+                Honduras, and El Salvador.</p>
+        </section>
+
+        <section>
+            <h2>Culture</h2>
+            <p>Guatemala is known for its rich Mayan heritage, traditional textiles, and colorful festivals such as
+                Semana Santa.</p>
+        </section>
+
+        <section>
+            <h2>Demographics</h2>
             <ul>
-                <li><strong>Capital:</strong> Guatemala City</li>
-                <li><strong>Population:</strong> ~17 million</li>
-                <li><strong>Language:</strong> Spanish</li>
-                <li><strong>Currency:</strong> Guatemalan Quetzal (GTQ)</li>
+                <li>Population: ~17 million</li>
+                <li>Capital: Guatemala City</li>
+                <li>Languages: Spanish, 21 Mayan languages</li>
             </ul>
         </section>
+
         <section>
-            <h2>Current Weather</h2>
-            <img src="images/weather-icon.svg" alt="Weather icon" width="50" height="50">
-            <p>Partly Cloudy, 24°C</p>
+            <h2>Weather</h2>
+            <img src="images/weather-icon.svg" alt="Weather icon" width="64" height="64">
+            <p>Guatemala has a tropical climate with distinct wet and dry seasons.</p>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2025 Kendahl Bingham</p>
+        <p>&copy; <span id="year"></span> Kendahl Bingham | Guatemala Information Page</p>
     </footer>
+
+    <script src="scripts/place.js" defer></script>
 </body>
 
 </html>
