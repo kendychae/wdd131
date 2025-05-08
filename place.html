@@ -8,8 +8,16 @@
         content="Explore Guatemala, the Land of Trees. Learn about its area, population, capital, languages, currency, and weather." />
     <meta name="author" content="Kendahl Bingham" />
     <title>Guatemala: Land of Trees</title>
+
+    <!-- Preconnect to Google Fonts to reduce render-blocking -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
+
+    <!-- Link to external CSS -->
     <link rel="stylesheet" href="styles/place.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- Defer JavaScript -->
     <script src="scripts/place.js" defer></script>
 </head>
 
@@ -23,7 +31,7 @@
             <picture>
                 <source srcset="images/hero-small.webp" media="(max-width: 600px)" />
                 <source srcset="images/hero-medium.webp" media="(max-width: 1024px)" />
-                <img src="images/hero-large.webp" alt="A view of Guatemala's landscape" />
+                <img src="images/hero-large.webp" alt="A view of Guatemala's landscape" width="1200" height="800" />
             </picture>
         </section>
 
@@ -40,7 +48,7 @@
 
         <section class="weather">
             <h2>Weather</h2>
-            <img class="weather-icon" src="images/weather-icon.svg" alt="Weather Icon" />
+            <img class="weather-icon" src="images/weather-icon.svg" alt="Weather Icon" width="100" height="100" />
             <div class="weather-info">
                 <p><span>Temperature:</span> <span id="temperature">70</span>°F</p>
                 <p><span>Wind Speed:</span> <span id="windspeed">13</span> mph</p>
