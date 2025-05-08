@@ -3,6 +3,8 @@
     --secondary-color: #2c3e50;
     --bg-color: #f4f4f4;
     --font-color: #333;
+    --font-family: 'Roboto', Arial, sans-serif;
+    /* Use Roboto as the primary font */
 }
 
 * {
@@ -12,7 +14,8 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-family);
+    /* Use the variable for consistency */
     color: var(--font-color);
     background-color: var(--bg-color);
     line-height: 1.6;
