@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GUATEMALA</title>
+    <link rel="stylesheet" href="styles/place.css" />
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>GUATEMALA</h1>
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/hero-small.webp" media="(max-width: 600px)" />
+                <source srcset="images/hero-medium.webp" media="(max-width: 1024px)" />
+                <img src="images/hero-large.webp" alt="A view of the place" />
+            </picture>
+        </section>
+
+        <section class="data">
+            <h2>Data</h2>
+            <div class="data-grid">
+                <p><span>Area:</span> <span>42,042 sq mi</span></p>
+                <p><span>Population:</span> <span>18,320,000</span></p>
+                <p><span>Capital:</span> <span>Guatemala City</span></p>
+                <p><span>Languages:</span> <span>Spanish & 23 indigenous languages</span></p>
+                <p><span>Currency:</span> <span>Quetzal GTQ</span></p>
+            </div>
+        </section>
+
+        <section class="weather">
+            <h2>Weather</h2>
+            <img class="weather-icon" src="images/weather-icon.svg" alt="Weather Icon" />
+            <div class="weather-info">
+                <p><span>Temperature:</span> <span id="temperature">70</span>°F</p>
+                <p><span>Wind Speed:</span> <span id="windspeed">13</span> mph</p>
+                <p><span>Wind Chill:</span> <span id="windchill">N/A</span></p>
+                <p><span>Condition:</span> <span>Sunny and overcast</span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> ✡️ Kendahl Bingham ✡️ USA</p>
+        <p>Last modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
