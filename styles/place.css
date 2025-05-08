@@ -1,66 +1,84 @@
-@media (max-width: 600px) {
-    body {
-        padding: 1rem;
-    }
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 :root {
-    --main-color: #006400;
-    --accent-color: #e0ffe0;
+    --primary-color: #2e7d32;
+    --secondary-color: #81c784;
+    --font-main: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    background-color: var(--accent-color);
+    font-family: var(--font-main);
+    background-color: #f5f5f5;
     color: #333;
+    line-height: 1.6;
 }
 
-header {
-    background-color: var(--main-color);
+header,
+footer {
+    background-color: var(--primary-color);
     color: white;
-    padding: 1rem;
     text-align: center;
-}
-
-h1 {
-    margin: 0;
+    padding: 1rem;
 }
 
 main {
     padding: 1rem;
 }
 
-.info,
-.weather {
-    margin-bottom: 2rem;
+h1,
+h2 {
+    color: var(--primary-color);
 }
 
-.info ul {
+picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+ul {
     list-style: none;
     padding: 0;
 }
 
-.info li {
-    margin: 0.5rem 0;
-}
-
-.weather img {
-    width: 50px;
-    height: auto;
+li {
+    margin-bottom: 0.5rem;
 }
 
 footer {
-    background-color: #ccc;
-    text-align: center;
-    padding: 1rem;
+    margin-top: 2rem;
     font-size: 0.9rem;
 }
 
-header::after {
+section {
+    margin-bottom: 2rem;
+}
+
+::after {
     content: "";
     display: block;
-    height: 4px;
-    background-color: white;
-    margin-top: 10px;
+    clear: both;
+}
+
+@media (min-width: 600px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    section {
+        margin-bottom: 0;
+    }
+
+    footer {
+        grid-column: span 2;
+    }
 }
