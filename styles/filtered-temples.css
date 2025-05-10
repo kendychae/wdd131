@@ -1,0 +1,154 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #1a1a1a;
+    /* Dark gray for readability */
+    background-color: #ffffff;
+    /* White background for high contrast */
+}
+
+header {
+    background-color: #003366;
+    /* Dark blue for strong contrast */
+    color: #ffffff;
+    /* White text for contrast */
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+nav ul {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #003366;
+    /* Dark blue for strong contrast */
+}
+
+nav ul li {
+    margin: 0.5rem 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    /* White text for contrast */
+    font-weight: bold;
+    padding: 0.5rem;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ffcc00;
+    /* Yellow hover effect for visibility */
+    color: #003366;
+    /* Dark blue text for contrast */
+}
+
+#hamburgerButton {
+    background: none;
+    border: none;
+    color: #ffffff;
+    /* White text for contrast */
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+main {
+    max-width: 600px;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: #ffffff;
+    /* White background for readability */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main h1,
+main h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #003366;
+    /* Dark blue for strong contrast */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+main figure {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+main img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+main figcaption {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    /* Dark gray for readability */
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #003366;
+    /* Dark blue for strong contrast */
+    color: #ffffff;
+    /* White text for contrast */
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #ffcc00;
+    /* Yellow links for visibility */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design for Larger Screens */
+@media (min-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #hamburgerButton {
+        display: none;
+    }
+
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
