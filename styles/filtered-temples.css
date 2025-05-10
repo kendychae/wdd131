@@ -98,21 +98,40 @@ main h2 {
     gap: 1rem;
 }
 
-main figure {
-    margin: 0;
-    padding: 0;
+.temple-card {
     text-align: center;
-}
-
-main img {
-    width: 100%;
-    height: auto;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    /* Light gray background for contrast */
     border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-main figcaption {
-    margin-top: 0.5rem;
-    font-weight: bold;
+.temple-card img {
+    width: 250px;
+    /* Explicit width for consistent size */
+    height: 150px;
+    /* Explicit height for consistent size */
+    object-fit: cover;
+    /* Ensure the image fills the space without distortion */
+    border-radius: 8px;
+    /* Optional: Add rounded corners for aesthetics */
+    display: block;
+    /* Ensure proper alignment */
+    margin: 0 auto;
+    /* Center the image */
+}
+
+.temple-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #003366;
+    /* Dark blue for strong contrast */
+}
+
+.temple-card p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
     color: #1a1a1a;
     /* Dark gray for readability */
 }

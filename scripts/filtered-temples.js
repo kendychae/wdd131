@@ -61,7 +61,7 @@ const temples = [
         dedicated: "1893, April, 6",
         area: 253015,
         imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake/400x250/salt-lake-temple-lds-273999-wallpaper.jpg",
+            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/2018/200x320/slctemple4.jpg",
     },
     {
         templeName: "Tokyo Japan",
@@ -69,7 +69,7 @@ const temples = [
         dedicated: "1980, October, 27",
         area: 52500,
         imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/400x250/tokyo-japan-temple-lds-273999-wallpaper.jpg",
+            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/200x320/tokyo_japan_temple-evening.jpeg",
     },
     {
         templeName: "Rome Italy",
@@ -77,7 +77,7 @@ const temples = [
         dedicated: "2019, March, 10",
         area: 40000,
         imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome-italy-temple-exterior-lds-273999-wallpaper.jpg",
+            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/2019/320x200/1-Rome-Temple-2160936.jpg",
     },
 ];
 
@@ -90,40 +90,21 @@ function displayTemples(filteredTemples) {
         card.classList.add("temple-card");
 
         card.innerHTML = `
-      <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
-      <h3>${temple.templeName}</h3>
-      <p><strong>Location:</strong> ${temple.location}</p>
-      <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-      <p><strong>Area:</strong> ${temple.area} sq ft</p>
-    `;
+            <img 
+                src="${temple.imageUrl}" 
+                alt="${temple.templeName}" 
+                width="250" 
+                height="150"
+            >
+            <h3>${temple.templeName}</h3>
+            <p><strong>Location:</strong> ${temple.location}</p>
+            <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+            <p><strong>Area:</strong> ${temple.area} sq ft</p>
+        `;
 
         container.appendChild(card);
     });
 }
-
-// Filter functions
-function filterOld() {
-    return temples.filter((temple) => new Date(temple.dedicated).getFullYear() < 1900);
-}
-
-function filterNew() {
-    return temples.filter((temple) => new Date(temple.dedicated).getFullYear() > 2000);
-}
-
-function filterLarge() {
-    return temples.filter((temple) => temple.area > 90000);
-}
-
-function filterSmall() {
-    return temples.filter((temple) => temple.area < 10000);
-}
-
-// Event listeners for navigation
-document.getElementById("home").addEventListener("click", () => displayTemples(temples));
-document.getElementById("old").addEventListener("click", () => displayTemples(filterOld()));
-document.getElementById("new").addEventListener("click", () => displayTemples(filterNew()));
-document.getElementById("large").addEventListener("click", () => displayTemples(filterLarge()));
-document.getElementById("small").addEventListener("click", () => displayTemples(filterSmall()));
 
 // Display all temples by default
 displayTemples(temples);
