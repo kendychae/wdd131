@@ -93,9 +93,10 @@ function displayTemples(filteredTemples) {
         card.innerHTML = `
             <img 
                 src="${temple.imageUrl}" 
-                alt="${temple.templeName}" 
+                alt="Image of ${temple.templeName}" 
                 width="250" 
                 height="150"
+                loading="lazy"
             >
             <h3>${temple.templeName}</h3>
             <p><strong>Location:</strong> ${temple.location}</p>
