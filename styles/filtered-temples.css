@@ -173,3 +173,19 @@ footer a:hover {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
+
+/* Accessibility Improvements */
+button:focus,
+a:focus {
+    outline: 2px solid #ffcc00;
+    /* Add focus outline for accessibility */
+    outline-offset: 2px;
+}
+
+/* Performance Improvements */
+img {
+    max-width: 100%;
+    /* Ensure images are responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+}
