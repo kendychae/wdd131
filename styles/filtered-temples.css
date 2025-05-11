@@ -1,9 +1,7 @@
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 /* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
+    /* Font loaded via HTML link */
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -105,6 +103,8 @@ main h2 {
     /* Light gray background for contrast */
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-height: 200px;
+    /* Ensure the card has height */
 }
 
 .temple-card img {
@@ -120,6 +120,8 @@ main h2 {
     /* Ensure proper alignment */
     margin: 0 auto;
     /* Center the image */
+    background-color: #e0e0e0;
+    /* Add a fallback background color */
 }
 
 .temple-card h3 {

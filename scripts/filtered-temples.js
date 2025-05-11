@@ -1,155 +1,146 @@
-const temples = [
-    {
-        templeName: "Aba Nigeria",
-        location: "Aba, Nigeria",
-        dedicated: "2005, August, 7",
-        area: 11500,
-        imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg",
-    },
-    {
-        templeName: "Manti Utah",
-        location: "Manti, Utah, United States",
-        dedicated: "1888, May, 21",
-        area: 74792,
-        imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg",
-    },
-    {
-        templeName: "Payson Utah",
-        location: "Payson, Utah, United States",
-        dedicated: "2015, June, 7",
-        area: 96630,
-        imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg",
-    },
-    {
-        templeName: "Yigo Guam",
-        location: "Yigo, Guam",
-        dedicated: "2020, May, 2",
-        area: 6861,
-        imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg",
-    },
-    {
-        templeName: "Washington D.C.",
-        location: "Kensington, Maryland, United States",
-        dedicated: "1974, November, 19",
-        area: 156558,
-        imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg",
-    },
-    {
-        templeName: "Lima Perú",
-        location: "Lima, Perú",
-        dedicated: "1986, January, 10",
-        area: 9600,
-        imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg",
-    },
-    {
-        templeName: "Mexico City Mexico",
-        location: "Mexico City, Mexico",
-        dedicated: "1983, December, 2",
-        area: 116642,
-        imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg",
-    },
-    {
-        templeName: "Salt Lake Temple",
-        location: "Salt Lake City, Utah, United States",
-        dedicated: "1893, April, 6",
-        area: 253015,
-        imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/2018/200x320/slctemple4.jpg",
-    },
-    {
-        templeName: "Tokyo Japan",
-        location: "Tokyo, Japan",
-        dedicated: "1980, October, 27",
-        area: 52500,
-        imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/200x320/tokyo_japan_temple-evening.jpeg",
-    },
-    {
-        templeName: "Rome Italy",
-        location: "Rome, Italy",
-        dedicated: "2019, March, 10",
-        area: 40000,
-        imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/2019/320x200/1-Rome-Temple-2160936.jpg",
-    },
-];
+// Ensure the DOM is fully loaded before running the script
+document.addEventListener("DOMContentLoaded", () => {
+    // Full array of temples
+    const temples = [
+        {
+            templeName: "Aba Nigeria",
+            location: "Aba, Nigeria",
+            dedicated: "2005, August, 7",
+            area: 11500,
+            imageUrl:
+                "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg",
+        },
+        {
+            templeName: "Manti Utah",
+            location: "Manti, Utah, United States",
+            dedicated: "1888, May, 21",
+            area: 74792,
+            imageUrl:
+                "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg",
+        },
+        {
+            templeName: "Payson Utah",
+            location: "Payson, Utah, United States",
+            dedicated: "2015, June, 7",
+            area: 96630,
+            imageUrl:
+                "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg",
+        },
+        {
+            templeName: "Yigo Guam",
+            location: "Yigo, Guam",
+            dedicated: "2020, May, 2",
+            area: 6861,
+            imageUrl:
+                "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg",
+        },
+        {
+            templeName: "Washington D.C.",
+            location: "Kensington, Maryland, United States",
+            dedicated: "1974, November, 19",
+            area: 156558,
+            imageUrl:
+                "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg",
+        },
+        {
+            templeName: "Lima Perú",
+            location: "Lima, Perú",
+            dedicated: "1986, January, 10",
+            area: 9600,
+            imageUrl:
+                "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg",
+        },
+        {
+            templeName: "Mexico City Mexico",
+            location: "Mexico City, Mexico",
+            dedicated: "1983, December, 2",
+            area: 116642,
+            imageUrl:
+                "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg",
+        },
+        {
+            templeName: "Provo Utah",
+            location: "Provo, Utah, United States",
+            dedicated: "1972, February, 9",
+            area: 128325,
+            imageUrl:
+                "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/provo-utah/200x320/provo-temple-lds-656890-wallpaper.jpg",
+        },
+        {
+            templeName: "Hong Kong China",
+            location: "Hong Kong, China",
+            dedicated: "1996, May, 26",
+            area: 21000,
+            imageUrl:
+                "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/hong-kong-china/200x320/hong-kong-china-temple-lds-39528-wallpaper.jpg",
+        },
+        {
+            templeName: "Paris France",
+            location: "Le Chesnay, France",
+            dedicated: "2017, May, 21",
+            area: 44000,
+            imageUrl:
+                "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/paris-france/320x200/paris-france-temple-exterior-evening-1905504.jpg",
+        },
+    ];
 
-// Function to display temples
-function displayTemples(filteredTemples) {
-    const container = document.getElementById("templeContainer");
-    container.innerHTML = ""; // Clear existing content
+    // Function to display temples
+    function displayTemples(filteredTemples) {
+        const container = document.getElementById("templeContainer");
+        container.innerHTML = ""; // Clear existing content
 
-    filteredTemples.forEach((temple) => {
-        const card = document.createElement("div");
-        card.classList.add("temple-card");
+        filteredTemples.forEach((temple) => {
+            const card = document.createElement("div");
+            card.classList.add("temple-card");
 
-        card.innerHTML = `
-            <img 
-                src="${temple.imageUrl}" 
-                alt="Image of ${temple.templeName}" 
-                width="250" 
-                height="150"
-                loading="lazy"
-            >
-            <h3>${temple.templeName}</h3>
-            <p><strong>Location:</strong> ${temple.location}</p>
-            <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-            <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
-        `;
+            card.innerHTML = `
+                <img 
+                    src="${temple.imageUrl}" 
+                    alt="Image of ${temple.templeName}" 
+                    width="250" 
+                    height="150"
+                >
+                <h3>${temple.templeName}</h3>
+                <p><strong>Location:</strong> ${temple.location}</p>
+                <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+                <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
+            `;
 
-        container.appendChild(card);
+            container.appendChild(card);
+        });
+    }
+
+    // Event listeners for navigation buttons
+    document.getElementById("home").addEventListener("click", () => {
+        displayTemples(temples); // Show all temples
     });
-}
 
-// Event listeners for navigation buttons
-document.getElementById("home").addEventListener("click", () => {
-    displayTemples(temples); // Show all temples
-});
-
-document.getElementById("old").addEventListener("click", () => {
-    const oldTemples = temples.filter((temple) => {
-        const year = parseInt(temple.dedicated.split(",")[0]);
-        return year < 1900;
+    document.getElementById("old").addEventListener("click", () => {
+        const oldTemples = temples.filter((temple) => {
+            const year = parseInt(temple.dedicated.split(",")[0]);
+            return year < 1900;
+        });
+        displayTemples(oldTemples);
     });
-    displayTemples(oldTemples);
-});
 
-document.getElementById("new").addEventListener("click", () => {
-    const newTemples = temples.filter((temple) => {
-        const year = parseInt(temple.dedicated.split(",")[0]);
-        return year > 2000;
+    document.getElementById("new").addEventListener("click", () => {
+        const newTemples = temples.filter((temple) => {
+            const year = parseInt(temple.dedicated.split(",")[0]);
+            return year > 2000;
+        });
+        displayTemples(newTemples);
     });
-    displayTemples(newTemples);
+
+    document.getElementById("large").addEventListener("click", () => {
+        const largeTemples = temples.filter((temple) => temple.area > 90000);
+        displayTemples(largeTemples);
+    });
+
+    document.getElementById("small").addEventListener("click", () => {
+        const smallTemples = temples.filter((temple) => temple.area < 10000);
+        displayTemples(smallTemples);
+    });
+
+    // Display all temples by default
+    displayTemples(temples);
 });
-
-document.getElementById("large").addEventListener("click", () => {
-    const largeTemples = temples.filter((temple) => temple.area > 90000);
-    displayTemples(largeTemples);
-});
-
-document.getElementById("small").addEventListener("click", () => {
-    const smallTemples = temples.filter((temple) => temple.area < 10000);
-    displayTemples(smallTemples);
-});
-
-// Display all temples by default
-displayTemples(temples);
-
-// Update footer with copyright year and last modified date
-const footer = document.querySelector("footer");
-if (footer) {
-    const currentYear = new Date().getFullYear();
-    const lastModified = document.lastModified;
-
-    footer.innerHTML = `
-        <p>&copy; ${currentYear} Kendahl Bingham</p>
-        <p>Last Modified: ${lastModified}</p>
-    `;
-}
