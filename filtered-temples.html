@@ -6,37 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore the Temple Album featuring a gallery of beautiful temples.">
     <meta name="author" content="Kendahl Bingham">
-    <meta name="theme-color" content="#003366"> <!-- Improves mobile performance -->
+    <meta name="theme-color" content="#003366">
+
     <title>Temple Album</title>
 
-    <!-- Preconnect to external origins -->
+    <!-- Preconnects -->
     <link rel="preconnect" href="https://content.churchofjesuschrist.org">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Preload critical CSS -->
+    <!-- Preload critical CSS and Fonts -->
     <link rel="preload" href="styles/filtered-temples.css" as="style">
     <link rel="stylesheet" href="styles/filtered-temples.css">
-
-    <!-- Preload Google Fonts -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 
-    <!-- Preload Key Images -->
-    <link rel="preload"
-        href="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
-        as="image">
-    <link rel="preload"
-        href="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
-        as="image">
-    <link rel="preload"
-        href="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
-        as="image">
+    <!-- Preload images -->
+    <link rel="preload" as="image"
+        href="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg">
+    <link rel="preload" as="image"
+        href="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg">
+    <link rel="preload" as="image"
+        href="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg">
 
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <!-- Deferred JavaScript -->
+    <!-- JavaScript deferred -->
     <script src="scripts/filtered-temples.js" defer></script>
 </head>
 
@@ -46,32 +42,37 @@
             <h1>Temple Album</h1>
         </div>
         <nav aria-label="Main Navigation">
-            <ul id="mainNav" role="menu">
-                <li><a href="#" id="home" role="menuitem">Home</a></li>
-                <li><a href="#" id="old" role="menuitem">Old</a></li>
-                <li><a href="#" id="new" role="menuitem">New</a></li>
-                <li><a href="#" id="large" role="menuitem">Large</a></li>
-                <li><a href="#" id="small" role="menuitem">Small</a></li>
-            </ul>
             <button id="hamburgerButton" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+            <ul id="mainNav" role="menubar">
+                <li role="none"><a href="#" id="home" role="menuitem">Home</a></li>
+                <li role="none"><a href="#" id="old" role="menuitem">Old</a></li>
+                <li role="none"><a href="#" id="new" role="menuitem">New</a></li>
+                <li role="none"><a href="#" id="large" role="menuitem">Large</a></li>
+                <li role="none"><a href="#" id="small" role="menuitem">Small</a></li>
+            </ul>
         </nav>
     </header>
+
     <main>
-        <h1>Welcome to the Temple Album</h1>
-        <h2>Explore Beautiful Temples</h2>
-        <div id="templeContainer" class="container">
-            <!-- Temple cards will be dynamically generated here -->
-        </div>
+        <h2>Welcome to the Temple Album</h2>
+        <section aria-label="Temple Gallery">
+            <h3>Explore Beautiful Temples</h3>
+            <div id="templeContainer" class="container">
+                <!-- Temple cards generated dynamically -->
+            </div>
+        </section>
     </main>
+
     <footer>
         <p id="footerCopyright"></p>
         <p id="footerLastModified">Last Modified: <span id="lastModified"></span></p>
     </footer>
+
     <script>
-        // Dynamically update the "Last Modified" date
+        // Last Modified date
         document.getElementById('lastModified').textContent = document.lastModified;
 
-        // Dynamically update the copyright year
+        // Dynamic copyright
         const currentYear = new Date().getFullYear();
         document.getElementById('footerCopyright').innerHTML = `&copy; ${currentYear} Kendahl Bingham`;
     </script>
