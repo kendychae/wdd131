@@ -56,12 +56,16 @@
         </div>
     </main>
     <footer>
-        <p id="footerCopyright">© 2025 Kendahl Bingham</p>
+        <p id="footerCopyright"></p>
         <p id="footerLastModified">Last Modified: <span id="lastModified"></span></p>
     </footer>
     <script>
         // Dynamically update the "Last Modified" date
         document.getElementById('lastModified').textContent = document.lastModified;
+
+        // Dynamically update the copyright year
+        const currentYear = new Date().getFullYear();
+        document.getElementById('footerCopyright').innerHTML = `&copy; ${currentYear} Kendahl Bingham`;
     </script>
 </body>
 

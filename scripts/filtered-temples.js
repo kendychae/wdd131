@@ -141,3 +141,15 @@ document.getElementById("small").addEventListener("click", () => {
 
 // Display all temples by default
 displayTemples(temples);
+
+// Update footer with copyright year and last modified date
+const footer = document.querySelector("footer");
+if (footer) {
+    const currentYear = new Date().getFullYear();
+    const lastModified = document.lastModified;
+
+    footer.innerHTML = `
+        <p>&copy; ${currentYear} Kendahl Bingham</p>
+        <p>Last Modified: ${lastModified}</p>
+    `;
+}
