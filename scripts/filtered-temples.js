@@ -81,6 +81,7 @@ const temples = [
     },
 ];
 
+// Function to display temples
 function displayTemples(filteredTemples) {
     const container = document.getElementById("templeContainer");
     container.innerHTML = ""; // Clear existing content
@@ -99,12 +100,43 @@ function displayTemples(filteredTemples) {
             <h3>${temple.templeName}</h3>
             <p><strong>Location:</strong> ${temple.location}</p>
             <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-            <p><strong>Area:</strong> ${temple.area} sq ft</p>
+            <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
         `;
 
         container.appendChild(card);
     });
 }
+
+// Event listeners for navigation buttons
+document.getElementById("home").addEventListener("click", () => {
+    displayTemples(temples); // Show all temples
+});
+
+document.getElementById("old").addEventListener("click", () => {
+    const oldTemples = temples.filter((temple) => {
+        const year = parseInt(temple.dedicated.split(",")[0]);
+        return year < 1900;
+    });
+    displayTemples(oldTemples);
+});
+
+document.getElementById("new").addEventListener("click", () => {
+    const newTemples = temples.filter((temple) => {
+        const year = parseInt(temple.dedicated.split(",")[0]);
+        return year > 2000;
+    });
+    displayTemples(newTemples);
+});
+
+document.getElementById("large").addEventListener("click", () => {
+    const largeTemples = temples.filter((temple) => temple.area > 90000);
+    displayTemples(largeTemples);
+});
+
+document.getElementById("small").addEventListener("click", () => {
+    const smallTemples = temples.filter((temple) => temple.area < 10000);
+    displayTemples(smallTemples);
+});
 
 // Display all temples by default
 displayTemples(temples);
