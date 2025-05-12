@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Product array
     const products = [
         { id: 'p1', name: 'Mountain Bike' },
         { id: 'p2', name: 'Road Bike' },
@@ -8,18 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 'p5', name: 'Bike Lock' }
     ];
 
-    // Populate select options
     const selectEl = document.getElementById('productName');
     if (selectEl) {
-        products.forEach(product => {
+        products.forEach(p => {
             const option = document.createElement('option');
-            option.value = product.id;
-            option.textContent = product.name;
+            option.value = p.id;
+            option.textContent = p.name;
             selectEl.appendChild(option);
         });
     }
 
-    // On review.html: increment & display review count
     if (window.location.pathname.includes('review.html')) {
         let count = parseInt(localStorage.getItem('reviewCount') || '0', 10) + 1;
         localStorage.setItem('reviewCount', count);
