@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Day Slavery - Site Plan</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- Internal CSS for Plan Document -->
+    <style>
+        /* Color Schema */
+        :root {
+            --primary-color: #2E2E2E;
+            /* Dark Charcoal */
+            --accent-color: #E63946;
+            /* Vermilion Red */
+            --background-color: #FFFFFF;
+            --text-color: #333333;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 1rem;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary-color);
+            color: #FFF;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            color: var(--accent-color);
+        }
+
+        section {
+            margin: 2rem 0;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.25rem;
+        }
+
+        ul {
+            margin-left: 1.5rem;
+        }
+
+        .wireframe {
+            border: 2px dashed var(--primary-color);
+            margin: 1rem 0;
+            padding: 1rem;
+        }
+
+        .wireframe .frame {
+            border: 1px solid var(--text-color);
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            text-align: center;
+            color: #666;
+        }
+
+        .wireframe-mobile {
+            width: 375px;
+        }
+
+        .wireframe-desktop {
+            width: 1200px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="Modern Day Slavery Awareness Logo" width="80" height="80">
+        <h1>Freedom Watch</h1>
+        <p>An awareness initiative against human trafficking</p>
+    </header>
+
+    <main>
+        <!-- Site Purpose -->
+        <section id="purpose">
+            <h2>Site Purpose</h2>
+            <p>The goal of <strong>Freedom Watch</strong> is to inform the public about modern day slavery and human
+                trafficking, provide resources for survivors, and offer guidance on how to get involved in prevention
+                efforts.</p>
+        </section>
+
+        <!-- Scenarios -->
+        <section id="scenarios">
+            <h2>Scenarios (Audience Questions)</h2>
+            <ul>
+                <li>How can I recognize signs of human trafficking in my community?</li>
+                <li>What organizations offer support and rehabilitation for survivors?</li>
+            </ul>
+        </section>
+
+        <!-- Color Schema -->
+        <section id="colors">
+            <h2>Color Schema</h2>
+            <ul>
+                <li><span style="color: var(--primary-color)">Dark Charcoal (<code>#2E2E2E</code>)</span> — used for
+                    headings, borders, and nav background.</li>
+                <li><span style="color: var(--accent-color)">Vermilion Red (<code>#E63946</code>)</span> — used for
+                    highlights, call-to-action buttons, and links.</li>
+            </ul>
+        </section>
+
+        <!-- Typography -->
+        <section id="typography">
+            <h2>Typography</h2>
+            <ul>
+                <li><strong>Montserrat</strong> — headings and section titles (font-weight: 700).</li>
+                <li><strong>Open Sans</strong> — body text, captions, paragraphs (font-weight: 400, 600).</li>
+            </ul>
+        </section>
+
+        <!-- Wireframe -->
+        <section id="wireframe">
+            <h2>Wireframe</h2>
+            <p>Below are simplified wireframes for mobile and desktop views.</p>
+            <div class="wireframe wireframe-mobile">
+                <h3>Mobile View (375px)</h3>
+                <div class="frame">Header / Logo &amp; Nav</div>
+                <div class="frame">Hero Image / CTA</div>
+                <div class="frame">Intro Text</div>
+                <div class="frame">Featured Resources Grid</div>
+                <div class="frame">Footer / Links</div>
+            </div>
+            <div class="wireframe wireframe-desktop">
+                <h3>Desktop View (1200px)</h3>
+                <div class="frame">Top Nav / Logo / Menu</div>
+                <div class="frame">Large Hero Banner with CTA</div>
+                <div class="frame">Three-Column Resource Overview</div>
+                <div class="frame">Newsletter Signup</div>
+                <div class="frame">Footer with Social &amp; Credits</div>
+            </div>
+        </section>
+
+        <!-- CSS -->
+        <section id="css">
+            <h2>CSS</h2>
+            <p>All styling will reference the color variables and font families defined above. A separate
+                <code>style.css</code> file will include these rules for modularity.
+            </p>
+        </section>
+
+        <!-- Testing -->
+        <section id="testing">
+            <h2>Testing &amp; Validation</h2>
+            <ul>
+                <li>HTML validation: <a href="https://validator.w3.org/">W3C Markup Validation</a></li>
+                <li>CSS validation: <a href="https://jigsaw.w3.org/css-validator/">W3C CSS Validator</a></li>
+                <li>Accessibility check: Lighthouse / Axe</li>
+                <li>Color contrast: <a href="https://webaim.org/resources/contrastchecker/">WebAIM Contrast Checker</a>
+                </li>
+                <li>SEO: Meta tags, descriptive alt text for images</li>
+                <li>Performance: PageSpeed Insights</li>
+            </ul>
+        </section>
+
+        <!-- Submission -->
+        <section id="submission">
+            <h2>Submission</h2>
+            <p>Commit <code>siteplan.html</code> (and <code>style.css</code>) to your <code>project</code> directory on
+                GitHub and submit the repository URL to Canvas.</p>
+        </section>
+    </main>
+</body>
+
+</html>
