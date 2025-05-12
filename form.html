@@ -7,14 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
         content="A form to submit detailed product reviews including rating, installation date, features, and written feedback." />
-    <meta name="author" content="Your Name Here" />
+    <meta name="author" content="Brigham Young University-Idaho Student" />
 
     <title>Product Review Form</title>
 
-    <!-- Google Font embed -->
+    <!-- Google Fonts preconnects + embed -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 
-    <!-- Custom CSS (moved into styles/) -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/form.css" />
 </head>
 
@@ -27,7 +29,7 @@
             <label for="productName">Product Name:</label>
             <select id="productName" name="productName" required>
                 <option value="" disabled selected>Select a Product …</option>
-                <!-- Options populated by JS -->
+                <!-- JS will populate -->
             </select>
 
             <!-- Overall Rating -->
@@ -69,10 +71,10 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Product Reviews. All rights reserved.</p>
+        <p>&copy; 2025 Brigham Young University-Idaho | All rights reserved.</p>
     </footer>
 
-    <!-- External JS (moved into scripts/) with defer -->
+    <!-- External JS with defer -->
     <script src="scripts/form.js" defer></script>
 </body>
 
