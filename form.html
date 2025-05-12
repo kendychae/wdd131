@@ -1,21 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
+    <!-- Document settings -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="A form to submit detailed product reviews including rating, installation date, features, and written feedback." />
+    <meta name="author" content="Your Name Here" />
+
     <title>Product Review Form</title>
-    <link rel="stylesheet" href="form.css" />
+
+    <!-- Google Font embed -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- Custom CSS (moved into styles/) -->
+    <link rel="stylesheet" href="styles/form.css" />
 </head>
 
 <body>
     <main>
         <h1>Product Review</h1>
+
         <form method="get" action="review.html">
             <!-- Product Name -->
             <label for="productName">Product Name:</label>
             <select id="productName" name="productName" required>
-                <option value="" disabled selected>Select a Product ...</option>
+                <option value="" disabled selected>Select a Product …</option>
                 <!-- Options populated by JS -->
             </select>
 
@@ -53,7 +64,7 @@
             <input type="text" id="userName" name="userName" />
 
             <!-- Submit Button -->
-            <input type="submit" value="Submit Review" />
+            <input type="submit" value="Submit" />
         </form>
     </main>
 
@@ -61,7 +72,8 @@
         <p>&copy; 2025 Product Reviews. All rights reserved.</p>
     </footer>
 
-    <script src="form.js"></script>
+    <!-- External JS (moved into scripts/) with defer -->
+    <script src="scripts/form.js" defer></script>
 </body>
 
 </html>
