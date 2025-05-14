@@ -1,12 +1,23 @@
 /* project.css */
 
-/* Variables & Base */
+/* Accessible Color & Typography */
 :root {
-    --primary: #2e2e2e;
-    --accent: #e63946;
-    --bg: #fff;
-    --text: #333;
-    --light-gray: #f4f4f4;
+    --color-bg: #F7F6F2;
+    /* soft ivory background */
+    --color-text: #1B1B1B;
+    /* very dark charcoal (20.1:1 against bg) */
+    --color-light-bg: #FFFFFF;
+    /* for cards/forms */
+    --color-accent: #B22222;
+    /* firebrick red (7.14:1 on bg) */
+    --color-accent-dark: #8A1B1B;
+    /* darker red for hover (8.68:1 on bg) */
+    --color-link: #005A9C;
+    /* dark blue (8.59:1 on bg) */
+    --color-link-hover: #003E6B;
+    /* darker blue (11.7:1 on bg) */
+    --color-button-text: #FFFFFF;
+    /* white on accent */
     --transition: 0.3s ease;
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Open Sans', sans-serif;
@@ -16,30 +27,33 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
     font-family: var(--font-body);
-    color: var(--text);
-    background: var(--bg);
+    background: var(--color-bg);
+    color: var(--color-text);
     line-height: 1.6;
 }
 
 a {
-    color: var(--accent);
+    color: var(--color-link);
     text-decoration: none;
+    transition: color var(--transition);
 }
 
 a:hover,
 a:focus {
+    color: var(--color-link-hover);
     text-decoration: underline;
 }
 
-/* Header */
+/* Header & Nav */
 header {
-    background: var(--bg);
-    border-bottom: 1px solid var(--light-gray);
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-light-bg);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -57,11 +71,11 @@ header {
 .logo {
     font-family: var(--font-heading);
     font-size: 1.5rem;
-    color: var(--primary);
+    color: var(--color-text);
 }
 
 nav a {
-    margin-left: 1rem;
+    margin-left: 1.25rem;
     font-weight: 600;
     position: relative;
 }
@@ -69,11 +83,11 @@ nav a {
 nav a::after {
     content: '';
     position: absolute;
-    bottom: -3px;
+    bottom: -4px;
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--accent);
+    background: var(--color-accent);
     transition: width var(--transition);
 }
 
@@ -87,8 +101,8 @@ nav a:focus::after {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2rem 1rem;
     gap: 1.5rem;
+    margin: 2rem 1rem;
 }
 
 .hero-text {
@@ -98,17 +112,19 @@ nav a:focus::after {
 .hero-text h2 {
     font-family: var(--font-heading);
     font-size: 2rem;
+    color: var(--color-text);
     margin-bottom: 0.5rem;
 }
 
 .hero-text p {
     font-size: 1.125rem;
+    color: var(--color-text);
     margin-bottom: 1rem;
 }
 
 .hero-text .btn {
-    background: var(--accent);
-    color: #fff;
+    background: var(--color-accent);
+    color: var(--color-button-text);
     border: none;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
@@ -119,7 +135,7 @@ nav a:focus::after {
 
 .hero-text .btn:hover,
 .hero-text .btn:focus {
-    background: rgba(230, 57, 70, 0.8);
+    background: var(--color-accent-dark);
     transform: translateY(-2px);
 }
 
@@ -131,7 +147,6 @@ nav a:focus::after {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Two-column on medium+ */
 @media (min-width: 768px) {
     .hero {
         flex-direction: row;
@@ -159,10 +174,8 @@ nav a:focus::after {
     margin: 2rem 1rem;
 }
 
-/* (Rest of your previous .resource-card, forms, footer styles…) */
-
 .resource-card {
-    background: #fff;
+    background: var(--color-light-bg);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -189,17 +202,20 @@ nav a:focus::after {
 
 .resource-card-content h3 {
     font-family: var(--font-heading);
+    font-size: 1.125rem;
+    color: var(--color-text);
     margin-bottom: 0.5rem;
 }
 
 .resource-card-content p {
     font-size: 0.95rem;
+    color: var(--color-text);
     margin-bottom: 1rem;
 }
 
 .resource-card-content button {
-    background: var(--accent);
-    color: #fff;
+    background: var(--color-accent);
+    color: var(--color-button-text);
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -208,7 +224,7 @@ nav a:focus::after {
 }
 
 .resource-card-content button:hover {
-    background: rgba(230, 57, 70, 0.8);
+    background: var(--color-accent-dark);
 }
 
 /* Newsletter Form */
@@ -217,17 +233,19 @@ nav a:focus::after {
 }
 
 form {
-    background: #fafafa;
+    background: var(--color-light-bg);
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 form label {
     display: block;
     margin-bottom: 0.25rem;
     font-weight: 600;
+    color: var(--color-text);
 }
 
 form input[type="email"] {
@@ -241,12 +259,12 @@ form input[type="email"] {
 
 form input:focus {
     outline: none;
-    border-color: var(--accent);
+    border-color: var(--color-accent-dark);
 }
 
 form button {
-    background: var(--accent);
-    color: #fff;
+    background: var(--color-accent);
+    color: var(--color-button-text);
     padding: 0.75rem;
     border: none;
     border-radius: 4px;
@@ -256,17 +274,18 @@ form button {
 }
 
 form button:hover {
-    background: rgba(230, 57, 70, 0.8);
+    background: var(--color-accent-dark);
 }
 
 #newsletter-msg {
     margin-top: 0.5rem;
     font-style: italic;
+    color: var(--color-text);
 }
 
 /* Footer */
 footer {
-    background: var(--light-gray);
+    background: var(--color-light-bg);
     padding: 1rem;
     text-align: center;
     font-size: 0.875rem;
@@ -274,7 +293,18 @@ footer {
 }
 
 footer a {
-    color: var(--primary);
+    color: var(--color-link);
     margin: 0 0.5rem;
     font-size: 0.95rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .hero-text h2 {
+        font-size: 1.75rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
 }
