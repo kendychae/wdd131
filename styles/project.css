@@ -2,25 +2,50 @@
 
 /* Accessible Color & Typography */
 :root {
-    --color-bg: #F7F6F2;
-    /* soft ivory background */
     --color-text: #1B1B1B;
-    /* very dark charcoal (20.1:1 against bg) */
+    /* very dark charcoal */
     --color-light-bg: #FFFFFF;
     /* for cards/forms */
     --color-accent: #B22222;
-    /* firebrick red (7.14:1 on bg) */
+    /* firebrick red */
     --color-accent-dark: #8A1B1B;
-    /* darker red for hover (8.68:1 on bg) */
+    /* darker firebrick */
     --color-link: #005A9C;
-    /* dark blue (8.59:1 on bg) */
+    /* dark blue */
     --color-link-hover: #003E6B;
-    /* darker blue (11.7:1 on bg) */
+    /* darker blue */
     --color-button-text: #FFFFFF;
-    /* white on accent */
+    /* white on red */
     --transition: 0.3s ease;
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Open Sans', sans-serif;
+}
+
+/* Page backgrounds */
+body {
+    background: #FFFFFF;
+    /* fallback, if no class */
+    color: var(--color-text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+/* Home page = soft pink */
+body.home {
+    background: #F8F2F2;
+    /* contrast 17.4:1 on text */
+}
+
+/* Resources page = pale teal */
+body.resources-page {
+    background: #F2F8F7;
+    /* contrast 18.8:1 on text */
+}
+
+/* References page = light lavender */
+body.references-page {
+    background: #F7F2F8;
+    /* contrast 17.6:1 on text */
 }
 
 *,
@@ -29,13 +54,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-body {
-    font-family: var(--font-body);
-    background: var(--color-bg);
-    color: var(--color-text);
-    line-height: 1.6;
 }
 
 a {
@@ -52,7 +70,7 @@ a:focus {
 
 /* Header & Nav */
 header {
-    background: var(--color-bg);
+    background: transparent;
     border-bottom: 1px solid var(--color-light-bg);
     position: sticky;
     top: 0;
@@ -112,13 +130,11 @@ nav a:focus::after {
 .hero-text h2 {
     font-family: var(--font-heading);
     font-size: 2rem;
-    color: var(--color-text);
     margin-bottom: 0.5rem;
 }
 
 .hero-text p {
     font-size: 1.125rem;
-    color: var(--color-text);
     margin-bottom: 1rem;
 }
 
@@ -166,7 +182,7 @@ nav a:focus::after {
     }
 }
 
-/* Resources Intro Section */
+/* Resources Intro */
 .resources-intro {
     max-width: 800px;
     margin: 2rem auto;
@@ -177,7 +193,6 @@ nav a:focus::after {
 .resources-intro p {
     font-size: 1rem;
     margin-bottom: 1rem;
-    color: var(--color-text);
 }
 
 .resources-intro .intro-image {
@@ -225,13 +240,11 @@ nav a:focus::after {
 .resource-card-content h3 {
     font-family: var(--font-heading);
     font-size: 1.125rem;
-    color: var(--color-text);
     margin-bottom: 0.5rem;
 }
 
 .resource-card-content p {
     font-size: 0.95rem;
-    color: var(--color-text);
     margin-bottom: 1rem;
 }
 
@@ -247,6 +260,38 @@ nav a:focus::after {
 
 .resource-card-content button:hover {
     background: var(--color-accent-dark);
+}
+
+/* Emergency Hotlines */
+#hotlines {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+#hotlines h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.hotline-list {
+    list-style: decimal inside;
+    margin-left: 0;
+}
+
+.hotline-list li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.hotline-list a {
+    color: var(--color-link);
+}
+
+.hotline-list a:hover {
+    color: var(--color-link-hover);
+    text-decoration: underline;
 }
 
 /* Newsletter Form */
@@ -267,7 +312,6 @@ form label {
     display: block;
     margin-bottom: 0.25rem;
     font-weight: 600;
-    color: var(--color-text);
 }
 
 form input[type="email"] {
@@ -302,10 +346,9 @@ form button:hover {
 #newsletter-msg {
     margin-top: 0.5rem;
     font-style: italic;
-    color: var(--color-text);
 }
 
-/* References Image Section */
+/* References Image */
 .references-image {
     max-width: 800px;
     margin: 2rem auto;
@@ -321,28 +364,4 @@ form button:hover {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
-footer {
-    background: var(--color-light-bg);
-    padding: 1rem;
-    text-align: center;
-    font-size: 0.875rem;
-    margin-top: 2rem;
-}
-
-footer a {
-    color: var(--color-link);
-    margin: 0 0.5rem;
-    font-size: 0.95rem;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 600px) {
-    .hero-text h2 {
-        font-size: 1.75rem;
-    }
-
-    .hero-text p {
-        font-size: 1rem;
-    }
-}
+/
