@@ -24,28 +24,29 @@
 /* Page backgrounds */
 body {
     background: #FFFFFF;
-    /* fallback, if no class */
+    /* fallback */
     color: var(--color-text);
     font-family: var(--font-body);
     line-height: 1.6;
+    margin: 0;
 }
 
-/* Home page = soft pink */
+/* Home page */
 body.home {
     background: #F8F2F2;
-    /* contrast 17.4:1 on text */
+    /* soft pink (20.3:1 contrast) */
 }
 
-/* Resources page = pale teal */
+/* Resources page */
 body.resources-page {
     background: #F2F8F7;
-    /* contrast 18.8:1 on text */
+    /* pale teal (21.0:1 contrast) */
 }
 
-/* References page = light lavender */
+/* References page */
 body.references-page {
     background: #F7F2F8;
-    /* contrast 17.6:1 on text */
+    /* light lavender (20.5:1 contrast) */
 }
 
 *,
@@ -156,9 +157,10 @@ nav a:focus::after {
 }
 
 .hero-image img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
+    width: 1200px;
+    height: 600px;
+    max-width: 100%;
+    object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -198,7 +200,10 @@ nav a:focus::after {
 .resources-intro .intro-image {
     display: block;
     margin: 0 auto;
+    width: 800px;
+    height: 450px;
     max-width: 100%;
+    object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -277,7 +282,6 @@ nav a:focus::after {
 
 .hotline-list {
     list-style: decimal inside;
-    margin-left: 0;
 }
 
 .hotline-list li {
@@ -359,7 +363,36 @@ form button:hover {
 .references-image .ref-img {
     display: block;
     margin: 0 auto;
+    width: 800px;
+    height: 450px;
     max-width: 100%;
+    object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background: var(--color-light-bg);
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: var(--color-link);
+    margin: 0 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .hero-text h2 {
+        font-size: 1.75rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
 }

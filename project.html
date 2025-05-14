@@ -5,15 +5,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Freedom Watch • Home</title>
+
+    <!-- Preconnect & Preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="project.css" as="style" />
     <link rel="stylesheet" href="project.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet" />
+
+    <link rel="preload" href="project.js" as="script" />
+    <link rel="preload" href="images/hero.jpg" as="image" />
 </head>
 
-<body>
+<body class="home">
+
     <header>
         <div class="nav-container">
-            <h1 class="logo">Freedom Watch</h1>
+            <div class="logo">Freedom Watch</div>
             <nav>
                 <a href="project.html">Home</a>
                 <a href="resources.html">Resources</a>
@@ -22,30 +31,27 @@
         </div>
     </header>
 
-    <main>
-        <!-- Hero Section with inline <img> -->
-        <section class="hero">
-            <div class="hero-text">
-                <h2>End Modern Day Slavery</h2>
-                <p>Learn how to recognize, report, and prevent human trafficking in your community.</p>
-                <button class="btn" onclick="document.querySelector('#newsletter-form input').focus()">
-                    Get Involved
-                </button>
-            </div>
-            <div class="hero-image">
-                <img src="images/hero.jpg" alt="Hands breaking free from chains" loading="lazy" />
-            </div>
-        </section>
-
-        <h2>Featured Resources</h2>
-        <div class="resources">
-            <!-- JS will populate -->
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Stand Against Modern Slavery</h2>
+            <p>Discover how you can recognize, report, and prevent human trafficking.</p>
+            <button class="btn" onclick="document.querySelector('#newsletter-form input').focus()">
+                Get Involved
+            </button>
         </div>
+        <div class="hero-image">
+            <img src="images/hero.jpg" alt="Hands breaking free from chains" loading="lazy" width="1200" height="600" />
+        </div>
+    </section>
+
+    <main>
+        <h2>Featured Resources</h2>
+        <div class="resources"></div>
 
         <section id="newsletter">
             <h2>Join Our Mailing List</h2>
             <form id="newsletter-form">
-                <label for="email">Email address:</label>
+                <label for="email">Email address</label>
                 <input type="email" id="email" name="email" placeholder="you@example.com" required />
                 <button type="submit">Subscribe</button>
             </form>
@@ -58,7 +64,7 @@
         <p>© 2025 Freedom Watch</p>
     </footer>
 
-    <script src="project.js"></script>
+    <script src="project.js" defer></script>
 </body>
 
 </html>
