@@ -25,7 +25,7 @@
     <main>
         <h2>References &amp; Citations</h2>
 
-        <!-- New Image Section -->
+        <!-- Image -->
         <section class="references-image">
             <img src="images/project2.jpg" alt="Freedom Watch reference materials" loading="lazy" class="ref-img"
                 width="800" height="450">
@@ -68,8 +68,14 @@
 
     <!-- Footer -->
     <footer>
-        <p>© 2025 Freedom Watch</p>
+        <p id="footerCopyright"></p>
     </footer>
+
+    <!-- Script -->
+    <script>
+        const currentYear = new Date().getFullYear();
+        document.getElementById('footerCopyright').innerHTML = `&copy; ${currentYear} Kendahl Bingham`;
+    </script>
 </body>
 
 </html>

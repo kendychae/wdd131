@@ -35,7 +35,7 @@
         </div>
     </section>
 
-    <!-- New Section: What Is Human Trafficking? -->
+    <!-- What Is Human Trafficking? -->
     <section id="what-is" style="max-width:800px; margin:2rem auto; padding:0 1rem;">
         <h2>What Is Human Trafficking?</h2>
         <p>
@@ -70,10 +70,16 @@
     <!-- Footer -->
     <footer>
         <p><a href="references.html">References &amp; Citations</a></p>
-        <p>© 2025 Freedom Watch</p>
+        <p id="footerCopyright"></p>
     </footer>
 
+    <!-- Scripts -->
     <script src="project.js" defer></script>
+    <script>
+        // Dynamic copyright
+        const currentYear = new Date().getFullYear();
+        document.getElementById('footerCopyright').innerHTML = `&copy; ${currentYear} Kendahl Bingham`;
+    </script>
 </body>
 
 </html>

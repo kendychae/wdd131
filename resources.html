@@ -55,7 +55,7 @@
             </ul>
         </section>
 
-        <!-- New Section: Additional Resources -->
+        <!-- Additional Resources -->
         <section id="additional-resources" style="max-width:800px; margin:2rem auto; padding:0 1rem;">
             <h2>Additional Resources</h2>
             <ul>
@@ -71,10 +71,15 @@
     <!-- Footer -->
     <footer>
         <p><a href="references.html">References &amp; Citations</a></p>
-        <p>© 2025 Freedom Watch</p>
+        <p id="footerCopyright"></p>
     </footer>
 
+    <!-- Scripts -->
     <script src="project.js" defer></script>
+    <script>
+        const currentYear = new Date().getFullYear();
+        document.getElementById('footerCopyright').innerHTML = `&copy; ${currentYear} Kendahl Bingham`;
+    </script>
 </body>
 
 </html>
