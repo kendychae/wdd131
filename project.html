@@ -5,21 +5,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Freedom Watch • Home</title>
-
-    <!-- Preconnect & Preload -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" href="project.css" as="style" />
     <link rel="stylesheet" href="project.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap"
-        rel="stylesheet" />
-
-    <link rel="preload" href="project.js" as="script" />
-    <link rel="preload" href="images/hero.jpg" as="image" />
+        rel="stylesheet">
 </head>
 
 <body class="home">
 
+    <!-- Header -->
     <header>
         <div class="nav-container">
             <div class="logo">Freedom Watch</div>
@@ -31,34 +24,50 @@
         </div>
     </header>
 
+    <!-- Hero -->
     <section class="hero">
         <div class="hero-text">
             <h2>Stand Against Modern Slavery</h2>
             <p>Discover how you can recognize, report, and prevent human trafficking.</p>
-            <button class="btn" onclick="document.querySelector('#newsletter-form input').focus()">
-                Get Involved
-            </button>
         </div>
         <div class="hero-image">
-            <img src="images/hero.jpg" alt="Hands breaking free from chains" loading="lazy" width="1200" height="600" />
+            <img src="images/hero.jpg" alt="Hands breaking free from chains" loading="lazy" width="1200" height="600">
         </div>
     </section>
 
+    <!-- New Section: What Is Human Trafficking? -->
+    <section id="what-is" style="max-width:800px; margin:2rem auto; padding:0 1rem;">
+        <h2>What Is Human Trafficking?</h2>
+        <p>
+            According to the U.S. Department of Justice, human trafficking is the exploitation of a person for labor or
+            commercial sex
+            through force, fraud, or coercion. It includes both sex trafficking and labor trafficking, affecting adults
+            and children
+            around the world.
+            <a href="https://www.justice.gov/humantrafficking/what-is-human-trafficking" target="_blank">
+                Learn more on the DOJ site.
+            </a>
+        </p>
+    </section>
+
+    <!-- Featured Resources -->
     <main>
         <h2>Featured Resources</h2>
-        <div class="resources"></div>
+        <div class="resources"><!-- populated by project.js --></div>
 
+        <!-- Newsletter Form -->
         <section id="newsletter">
             <h2>Join Our Mailing List</h2>
             <form id="newsletter-form">
                 <label for="email">Email address</label>
-                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
                 <button type="submit">Subscribe</button>
             </form>
             <p id="newsletter-msg" aria-live="polite"></p>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <p><a href="references.html">References &amp; Citations</a></p>
         <p>© 2025 Freedom Watch</p>

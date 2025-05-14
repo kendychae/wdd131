@@ -5,21 +5,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Freedom Watch • Resources</title>
-
-    <!-- Preconnect & Preload -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" href="project.css" as="style" />
     <link rel="stylesheet" href="project.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap"
-        rel="stylesheet" />
-
-    <link rel="preload" href="project.js" as="script" />
-    <link rel="preload" href="images/project.jpg" as="image" />
+        rel="stylesheet">
 </head>
 
 <body class="resources-page">
 
+    <!-- Header -->
     <header>
         <div class="nav-container">
             <div class="logo">Freedom Watch</div>
@@ -34,32 +27,48 @@
     <main>
         <h2>All Resources</h2>
 
+        <!-- Intro + Image -->
         <section class="resources-intro">
             <p>Welcome to our curated directory of organizations, hotlines, and educational materials dedicated to
-                combating modern-day slavery. Click any card below to visit the organization’s site.</p>
-            <img src="images/project.jpg" alt="Collage of Freedom Watch initiatives" loading="lazy" width="800"
-                height="450" class="intro-image" />
+                combating modern-day slavery.</p>
+            <img src="images/project.jpg" alt="Collage of Freedom Watch initiatives" loading="lazy" class="intro-image"
+                width="800" height="450">
         </section>
 
+        <!-- JS‐populated grid -->
         <div class="resources"></div>
 
+        <!-- Emergency Hotlines -->
         <section id="hotlines">
             <h2>Emergency Hotlines</h2>
             <ul class="hotline-list">
                 <li><strong><a href="https://humantraffickinghotline.org/" target="_blank">National Human Trafficking
-                            Hotline (US):</a></strong> 1-888-373-7888</li>
-                <li><strong><a href="https://polarisproject.org/" target="_blank">Polaris Tip Line (US):</a></strong>
+                            Hotline (US)</a>:</strong> 1-888-373-7888</li>
+                <li><strong><a href="https://polarisproject.org/" target="_blank">Polaris Tip Line (US)</a>:</strong>
                     1-844-888-3733</li>
-                <li><strong><a href="https://www.modernslaveryhelpline.org/" target="_blank">UK Modern Slavery &amp;
-                            Exploitation Helpline:</a></strong> 08000 121 700</li>
+                <li><strong><a href="https://www.modernslaveryhelpline.org/" target="_blank">UK Modern Slavery
+                            Helpline</a>:</strong> 08000 121 700</li>
                 <li><strong><a href="https://www.canadianhumantraffickinghotline.ca/" target="_blank">Canadian Human
-                            Trafficking Hotline:</a></strong> 1-833-900-1010</li>
-                <li><strong><a href="https://www.internationalchildrenshelpline.org/" target="_blank">International
-                            Missing Children’s Hotline (116 000):</a></strong> 116 000</li>
+                            Trafficking Hotline</a>:</strong> 1-833-900-1010</li>
+                <li><strong><a href="https://www.internationalchildrenshelpline.org/" target="_blank">Intl. Missing
+                            Children’s Hotline</a>:</strong> 116 000</li>
+            </ul>
+        </section>
+
+        <!-- New Section: Additional Resources -->
+        <section id="additional-resources" style="max-width:800px; margin:2rem auto; padding:0 1rem;">
+            <h2>Additional Resources</h2>
+            <ul>
+                <li>
+                    <a href="https://www.justice.gov/humantrafficking/what-is-human-trafficking" target="_blank">
+                        What Is Human Trafficking? – U.S. Department of Justice
+                    </a>
+                </li>
             </ul>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <p><a href="references.html">References &amp; Citations</a></p>
         <p>© 2025 Freedom Watch</p>
