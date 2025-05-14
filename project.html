@@ -7,26 +7,34 @@
     <title>Freedom Watch • Home</title>
     <link rel="stylesheet" href="project.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
 </head>
 
 <body>
     <header>
-        <h1>Freedom Watch</h1>
-        <nav>
-            <a href="project.html">Home</a>
-            <a href="resources.html">Resources</a>
-            <a href="references.html">References</a>
-        </nav>
+        <div class="nav-container">
+            <h1 class="logo">Freedom Watch</h1>
+            <nav>
+                <a href="project.html">Home</a>
+                <a href="resources.html">Resources</a>
+                <a href="references.html">References</a>
+            </nav>
+        </div>
     </header>
 
     <main>
+        <!-- Hero Section with inline <img> -->
         <section class="hero">
             <div class="hero-text">
                 <h2>End Modern Day Slavery</h2>
                 <p>Learn how to recognize, report, and prevent human trafficking in your community.</p>
+                <button class="btn" onclick="document.querySelector('#newsletter-form input').focus()">
+                    Get Involved
+                </button>
             </div>
-            <img src="images/hero.jpg" alt="Hands breaking free from chains" loading="lazy">
+            <div class="hero-image">
+                <img src="images/hero.jpg" alt="Hands breaking free from chains" loading="lazy" />
+            </div>
         </section>
 
         <h2>Featured Resources</h2>
@@ -38,7 +46,7 @@
             <h2>Join Our Mailing List</h2>
             <form id="newsletter-form">
                 <label for="email">Email address:</label>
-                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
                 <button type="submit">Subscribe</button>
             </form>
             <p id="newsletter-msg" aria-live="polite"></p>
