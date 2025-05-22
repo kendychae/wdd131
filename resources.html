@@ -4,82 +4,54 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Freedom Watch • Resources</title>
+    <meta name="description" content="Resources and support for those impacted by human trafficking." />
+    <title>Resources – Freedom Watch</title>
     <link rel="stylesheet" href="project.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap"
-        rel="stylesheet">
 </head>
 
-<body class="resources-page">
-
-    <!-- Header -->
+<body>
     <header>
-        <div class="nav-container">
-            <div class="logo">Freedom Watch</div>
-            <nav>
-                <a href="project.html">Home</a>
-                <a href="resources.html">Resources</a>
-                <a href="references.html">References</a>
-            </nav>
-        </div>
+        <h1>Freedom Watch</h1>
+        <nav>
+            <ul>
+                <li><a href="project.html">Home</a></li>
+                <li><a href="resources.html" aria-current="page">Resources</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <h2>All Resources</h2>
-
-        <!-- Intro + Image -->
-        <section class="resources-intro">
-            <p>Welcome to our curated directory of organizations, hotlines, and educational materials dedicated to
-                combating modern-day slavery.</p>
-            <img src="images/project.jpg" alt="Collage of Freedom Watch initiatives" loading="lazy" class="intro-image"
-                width="800" height="450">
-        </section>
-
-        <!-- JS‐populated grid -->
-        <div class="resources"></div>
-
-        <!-- Emergency Hotlines -->
-        <section id="hotlines">
-            <h2>Emergency Hotlines</h2>
-            <ul class="hotline-list">
-                <li><strong><a href="https://humantraffickinghotline.org/" target="_blank">National Human Trafficking
-                            Hotline (US)</a>:</strong> 1-888-373-7888</li>
-                <li><strong><a href="https://polarisproject.org/" target="_blank">Polaris Tip Line (US)</a>:</strong>
-                    1-844-888-3733</li>
-                <li><strong><a href="https://www.modernslaveryhelpline.org/" target="_blank">UK Modern Slavery
-                            Helpline</a>:</strong> 08000 121 700</li>
-                <li><strong><a href="https://www.canadianhumantraffickinghotline.ca/" target="_blank">Canadian Human
-                            Trafficking Hotline</a>:</strong> 1-833-900-1010</li>
-                <li><strong><a href="https://www.internationalchildrenshelpline.org/" target="_blank">Intl. Missing
-                            Children’s Hotline</a>:</strong> 116 000</li>
-            </ul>
-        </section>
-
-        <!-- Additional Resources -->
-        <section id="additional-resources" style="max-width:800px; margin:2rem auto; padding:0 1rem;">
-            <h2>Additional Resources</h2>
+        <section>
+            <h2>Emergency Contacts</h2>
             <ul>
-                <li>
-                    <a href="https://www.justice.gov/humantrafficking/what-is-human-trafficking" target="_blank">
-                        What Is Human Trafficking? – U.S. Department of Justice
-                    </a>
-                </li>
+                <li><strong>U.S. National Human Trafficking Hotline:</strong> 1-888-373-7888</li>
+                <li><strong>Text:</strong> 233733 (Text "HELP" or "INFO")</li>
+                <li><a href="https://humantraffickinghotline.org" target="_blank" rel="noopener">Visit Hotline
+                        Website</a></li>
             </ul>
+        </section>
+
+        <section>
+            <h2>Survivor Support</h2>
+            <p>Organizations that help survivors with housing, legal aid, and trauma recovery:</p>
+            <ul>
+                <li><a href="https://polarisproject.org" target="_blank" rel="noopener">Polaris Project</a></li>
+                <li><a href="https://www.a21.org" target="_blank" rel="noopener">A21 Campaign</a></li>
+                <li><a href="https://www.ecpat.org" target="_blank" rel="noopener">ECPAT International</a></li>
+            </ul>
+            <figure>
+                <img src="images/project.jpg" alt="Freedom-themed graffiti showing hope for survivors" loading="lazy"
+                    width="800" height="533" />
+                <figcaption>Organizations empower survivors to reclaim their freedom and rebuild their lives.
+                </figcaption>
+            </figure>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p><a href="references.html">References &amp; Citations</a></p>
-        <p id="footerCopyright"></p>
+        <p>&copy; 2025 Freedom Watch | <a href="references.html">References</a></p>
     </footer>
-
-    <!-- Scripts -->
-    <script src="project.js" defer></script>
-    <script>
-        const currentYear = new Date().getFullYear();
-        document.getElementById('footerCopyright').innerHTML = `&copy; ${currentYear} Kendahl Bingham`;
-    </script>
 </body>
 
 </html>

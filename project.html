@@ -4,88 +4,66 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Freedom Watch • Home</title>
+    <meta name="description" content="Raising awareness and fighting against human trafficking and modern slavery." />
+    <title>Freedom Watch – End Human Trafficking</title>
     <link rel="stylesheet" href="project.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap"
-        rel="stylesheet">
 </head>
 
-<body class="home">
-
-    <!-- Header -->
+<body>
     <header>
-        <div class="nav-container">
-            <div class="logo">Freedom Watch</div>
-            <nav>
-                <a href="project.html">Home</a>
-                <a href="resources.html">Resources</a>
-                <a href="references.html">References</a>
-            </nav>
-        </div>
+        <h1>Freedom Watch</h1>
+        <nav>
+            <ul>
+                <li><a href="project.html" aria-current="page">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-text">
-            <h2>Stand Against Modern Slavery!</h2>
-            <p>Discover how you can recognize, report, and prevent human trafficking.
-                Therefore, that we should waste
-                and wear out our lives
-                in bringing to light all the hidden things of darkness, wherein
-                we know them; and they are truly manifest from heaven—
-
-                These should then be attended to with great earnestness. Doctrine and Covenants 123:13-14</p>
-        </div>
-        <div class="hero-image">
-            <img src="images/hero.jpg" alt="Hands breaking free from chains" loading="lazy" width="1200" height="600">
-        </div>
-    </section>
-
-    <!-- What Is Human Trafficking? -->
-    <section id="what-is" style="max-width:800px; margin:2rem auto; padding:0 1rem;">
-        <h2>What Is Human Trafficking?</h2>
-        <p>
-            According to the U.S. Department of Justice, human trafficking is the exploitation of a person for labor or
-            commercial sex
-            through force, fraud, or coercion. It includes both sex trafficking and labor trafficking, affecting adults
-            and children
-            around the world.
-            <a href="https://www.justice.gov/humantrafficking/what-is-human-trafficking" target="_blank">
-                Learn more on the DOJ site.
-            </a>
-        </p>
-    </section>
-
-    <!-- Featured Resources -->
     <main>
-        <h2>Featured Resources</h2>
-        <div class="resources"><!-- populated by project.js --></div>
+        <section class="hero" aria-label="Introduction to Human Trafficking">
+            <h2>What is Human Trafficking?</h2>
+            <p>
+                Human trafficking is modern-day slavery. Victims are exploited through force, fraud, or coercion.
+                Millions around the world are suffering silently.
+            </p>
+            <figure>
+                <img src="images/hero.jpg" alt="Bound hands symbolizing human trafficking" loading="lazy" width="800"
+                    height="533" />
+                <figcaption>Millions are trapped in modern slavery around the world today.</figcaption>
+            </figure>
+        </section>
 
-        <!-- Newsletter Form -->
-        <section id="newsletter">
-            <h2>Join Our Mailing List</h2>
-            <form id="newsletter-form">
-                <label for="email">Email address</label>
-                <input type="email" id="email" name="email" placeholder="you@example.com" required>
-                <button type="submit">Subscribe</button>
-            </form>
-            <p id="newsletter-msg" aria-live="polite"></p>
+        <section class="cta" aria-label="Call to Action">
+            <h2>What You Can Do</h2>
+            <ul>
+                <li>Recognize the signs of trafficking</li>
+                <li>Report suspicious activity</li>
+                <li>Support survivor-centered organizations</li>
+                <li>Educate your community</li>
+            </ul>
+
+            <button id="learnMoreBtn">Learn More</button>
+
+            <div id="moreInfo" class="hidden">
+                <form id="emailForm">
+                    <label for="email">Enter your email to receive more info:</label>
+                    <input type="email" id="email" name="email" required />
+                    <button type="submit">Submit</button>
+                </form>
+                <div id="thankYouMessage" class="hidden">
+                    <p>Thank you for signing up! Check your inbox for more resources.</p>
+                </div>
+            </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p><a href="references.html">References &amp; Citations</a></p>
-        <p id="footerCopyright"></p>
+        <p>&copy; 2025 Freedom Watch | <a href="references.html">References</a></p>
     </footer>
 
-    <!-- Scripts -->
-    <script src="project.js" defer></script>
-    <script>
-        // Dynamic copyright
-        const currentYear = new Date().getFullYear();
-        document.getElementById('footerCopyright').innerHTML = `&copy; ${currentYear} Kendahl Bingham`;
-    </script>
+    <script src="project.js"></script>
 </body>
 
 </html>
