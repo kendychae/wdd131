@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Raising awareness and fighting against human trafficking and modern slavery." />
-    <title>Freedom Watch – End Human Trafficking</title>
+    <meta name="description" content="Freedom Watch - Raising awareness about human trafficking." />
+    <title>Freedom Watch – Home</title>
     <link rel="stylesheet" href="project.css" />
 </head>
 
@@ -22,51 +22,34 @@
     </header>
 
     <main>
-        <section class="hero" aria-label="Introduction to Human Trafficking">
-            <h2>What is Human Trafficking?</h2>
-            <p>
-                Human trafficking is modern-day slavery. Victims are exploited through force, fraud, or coercion.
-                Millions around the world are suffering silently. "It is an iron yoke, it is a strong band;
-                they are the very handcuffs, and chains, and shackles, and fetters of hell...
-                Which dark and blackening deeds are enough to make hell itself shudder, and to stand aghast and pale,
-                and the hands of
-                the very devil to tremble and palsy...
-                And also it is an imperative duty that we owe to all the rising generation, and to all the pure in
-                heart... Therefore,
-                that we should waste and wear out our lives in bringing to light all the hidden things of darkness,
-                wherein we know
-                them; and they are truly manifest from heaven—
-                These should then be attended to with great earnestness."
-                Doctrine and Covenants 123:8,10,11,13-14
-            </p>
+        <section class="hero">
             <figure>
-                <img src="images/hero.jpg" alt="Bound hands symbolizing human trafficking" loading="lazy" width="800"
-                    height="533" />
-                <figcaption>Millions are trapped in modern slavery around the world today.</figcaption>
+                <img src="images/hero.jpg" alt="Freedom-themed graffiti showing hope for survivors" loading="lazy"
+                    width="800" height="533" />
+                <figcaption>Empowering survivors and raising awareness.</figcaption>
             </figure>
+            <p>Welcome to Freedom Watch, a site dedicated to raising awareness and supporting efforts against human
+                trafficking.</p>
+            <button id="learnMoreBtn">Learn More</button>
+            <div id="moreInfo" class="hidden">
+                <p>Human trafficking is a global crisis that impacts millions worldwide. Together, we can help end this
+                    crime.</p>
+                <form id="emailForm">
+                    <label for="emailInput">Subscribe for updates:</label>
+                    <input type="email" id="emailInput" name="emailInput" required placeholder="Your email address" />
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p id="thankYouMessage" class="hidden">Thank you for subscribing!</p>
+            </div>
         </section>
 
-        <section class="cta" aria-label="Call to Action">
-            <h2>What You Can Do</h2>
+        <section class="cta">
+            <h2>Take Action</h2>
             <ul>
-                <li>Recognize the signs of trafficking</li>
-                <li>Report suspicious activity</li>
-                <li>Support survivor-centered organizations</li>
-                <li>Educate your community</li>
+                <li>Educate yourself and others about human trafficking.</li>
+                <li>Support local organizations aiding survivors.</li>
+                <li>Report suspicious activities to the authorities.</li>
             </ul>
-
-            <button id="learnMoreBtn">Learn More</button>
-
-            <div id="moreInfo" class="hidden">
-                <form id="emailForm">
-                    <label for="email">Enter your email to receive more info:</label>
-                    <input type="email" id="email" name="email" required />
-                    <button type="submit">Submit</button>
-                </form>
-                <div id="thankYouMessage" class="hidden">
-                    <p>Thank you for signing up! Check your inbox for more resources.</p>
-                </div>
-            </div>
         </section>
     </main>
 
